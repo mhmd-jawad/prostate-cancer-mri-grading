@@ -1,2 +1,2 @@
 # prostate-cancer-mri-grading
-Prostate cancer grading and classification
+Prostate cancer ISUP grading and classification
