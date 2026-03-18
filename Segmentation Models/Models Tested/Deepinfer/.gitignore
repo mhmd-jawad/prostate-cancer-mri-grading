@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+
+training_data/
+nrrd_images/
+nrrd_labels/
+deepinfer_results_first25/
+
+slicer_geometry_report.txt
+dice_scores_first25.csv
