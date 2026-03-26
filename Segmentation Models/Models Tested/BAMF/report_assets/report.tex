@@ -1,0 +1,62 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+\setstretch{1.08}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+
+\title{Evaluation of BAMF/AIMI Prostate MR Segmentation on PROMISE12 Test Set}
+\author{
+    Your Name \\
+    AUB ID: XXXXXXXX \\
+    American University of Beirut
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+This report presents the evaluation of the BAMF/AIMI prostate MR pretrained segmentation pipeline on the PROMISE12 test set. PROMISE12 contains T2-weighted prostate MRI scans with binary whole-gland segmentation masks. In this experiment, the BAMF/AIMI model was used to generate prostate segmentation masks for the PROMISE12 test cases, and the predictions were compared against the corresponding ground-truth masks. The main evaluation metric is the Dice Similarity Coefficient (Dice), computed for each case and summarized across the dataset.
+
+\section*{Qualitative Comparison}
+Figure~\ref{fig:case00}, Figure~\ref{fig:case09}, and Figure~\ref{fig:case23} show representative qualitative examples comparing the ground-truth annotation and the BAMF/AIMI model output.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results/figures/case00_compare.png}
+    \caption{Comparison between the ground-truth annotation and the BAMF/AIMI model output for Case00.}
+    \label{fig:case00}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results/figures/case09_compare.png}
+    \caption{Comparison between the ground-truth annotation and the BAMF/AIMI model output for Case09.}
+    \label{fig:case09}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{results/figures/case23_compare.png}
+    \caption{Comparison between the ground-truth annotation and the BAMF/AIMI model output for Case23.}
+    \label{fig:case23}
+\end{figure}
+
+\section*{Quantitative Results}
+Table~\ref{tab:quantitative-results} reports the whole-gland Dice score for each evaluated PROMISE12 test case. Since PROMISE12 provides binary whole-gland masks, zonal metrics are not applicable in this evaluation.
+
+\input{quantitative_results_table.tex}
+
+\section*{Summary}
+The BAMF/AIMI pipeline achieved a mean Dice score of 0.9163 on the evaluated PROMISE12 test cases. Across 30 evaluated cases, the model showed consistently strong whole-gland prostate segmentation performance, with some variation between easier and more challenging scans.
+
+\end{document}
