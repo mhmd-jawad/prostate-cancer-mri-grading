@@ -5,6 +5,10 @@ training_data/
 nrrd_images/
 nrrd_labels/
 deepinfer_results_first25/
+test_data/
+test_data_run_*/
 
 slicer_geometry_report.txt
 dice_scores_first25.csv
+generate_overlay_figures.py
+verify_mhd_nrrd_match.py
