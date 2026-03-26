@@ -1,0 +1,2 @@
+dataset,model,num_evaluated_cases,mean_dice,std_dice,min_dice,max_dice
+PROMISE12,BAMF/AIMI prostate MR,30,0.916301007022778,0.02729701787012388,0.8523970697329377,0.9620860939088307
